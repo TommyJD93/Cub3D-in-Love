@@ -23,6 +23,7 @@
 # include "fixed_types.h"
 # include "cub_types.h"
 # include "listft.h"
+# include "engine.h"
 
 //macros
 # define WIN_SIZE_W 1028

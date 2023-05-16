@@ -48,7 +48,7 @@ OBJS			= $(SRCS:$(SRC_DIR)/%.$(EXTENSION)=$(OBJ_DIR)/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ_SUB_DIRS) $(OBJS) minilibx
+$(NAME): minilibx $(OBJ_SUB_DIRS) $(OBJS)
 	@ $(CC) $(CFLAGS) $(MLX_FLAGS) $(MLX_LIB) $(OBJS) -o $@
 	@ echo "$(GREEN)[+] $(NAME) compiled$(END)"
 
@@ -61,13 +61,16 @@ $(OBJ_SUB_DIRS):
 	@ echo "$(PURPLE)[+] $(SRC_DIR) remapped into $(OBJ_DIR) $(END)"
 
 minilibx:
-	make -C $(MLX_PATH)
+	@make -s -C $(MLX_PATH)
 
-clean:
+minilibx_clean:
+	@make -s clean -C $(MLX_PATH)
+
+clean: minilibx_clean
 	@ $(RM) $(OBJ_DIR)
 	@ echo "$(YELLOW)[+] $(OBJ_DIR) cleaned$(END)"
 
-fclean: clean
+fclean: minilibx_clean clean
 	@ $(RM) $(NAME)
 	@ echo "$(YELLOW)[+] $(NAME) fcleaned$(END)"
 

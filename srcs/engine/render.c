@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_incl/engine.h"
+#include "../../incl/engine.h"
 
 #define FLOOR 0x0055cc55
 #define SKY 0x00aaaaee

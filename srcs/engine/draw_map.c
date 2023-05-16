@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_incl/engine.h"
+#include "../../incl/engine.h"
 
 void draw_tile(t_cub* cub, unsigned long int color, int w, int h)
 {
@@ -34,7 +34,7 @@ void draw_tile(t_cub* cub, unsigned long int color, int w, int h)
     }
 }
 
-void update_coordinates(int* w, int* h)
+void	update_coordinates(int* w, int* h)
 {
     (*h)++;
     if (*h == 15)

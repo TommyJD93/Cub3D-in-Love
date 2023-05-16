@@ -11,3 +11,7 @@ gestione muri
 WSNE char UNICO
 normalizzare la mappa salvando gli spazi vuoti come 0 (nebbia)
 update map deve gestire l assenza della mappa
+
+
+-----
+da non spostare in programft: gc_lib, listft, libft, fixed-points, gnl

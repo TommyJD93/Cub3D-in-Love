@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_incl/engine.h"
+#include "../../incl/engine.h"
 
 //per testare uso la key (cioé il movimento del player), in seguito
 //questo valore sará sostituito dall orientamento del player + key
